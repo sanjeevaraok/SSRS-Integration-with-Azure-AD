@@ -67,8 +67,8 @@ namespace Microsoft.Samples.ReportingServices.CustomSecurity
 
             var EndPointUrl = String.Format("{0}/{1}/{2}/authorize?", authority, tenant, authorizeSuffix);
 
-            var clientId = "15d8583e-84e2-4f05-851d-5c78a9f6337c"; ;
-            var redirectURL = "http://ggku3dell1097/ReportServer/Logon.aspx";
+            var clientId = "applicationid from Azure site"; ;
+            var redirectURL = "http://domainname/ReportServer/Logon.aspx";// replace domain name with actual domain name.
             var parameters = new Dictionary<string, string>
             {
                 { "response_type", "id_token" },

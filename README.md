@@ -41,6 +41,16 @@ Script is in the CustomSecuritySample\Setup folder.
 -	Run the query to create the UserAccounts database. 
 -	Exit SQL Server Management Studio. 
 
+## Step 2 : Setup app in Azure portal
+
+1. Log on to the Azure portal, and navigate to your App Service app. Copy your app URL. You will use this to configure your Azure Active Directory app registration.
+2. Navigate to Active Directory, then select the App registrations, then click New application registration at the top to start a new app registration.
+3. In the Create page, enter a Name for your app registration, select the Web App / API type, in the Sign-on URL box paste the application URL (from step 1). Then click to Create.
+4. In a few seconds, you should see the new app registration you just created.
+5. Once the app registration has been added, click on the app registration name, click on Settings at the top, then click on Properties
+6. In the App ID URI box, paste in the Application URL (from step 1), also in the Home Page URLpaste in the Application URL (from step 1) as well, then click Save
+7. Now click on the Reply URLs, edit the Reply URL, paste in the Application URL (from step 1), (For example, http://domainname/ReportServer/Logon.aspx). Click Save.
+8. At this point, copy the Application ID for the app. Keep it for later use. You will need it to configure your App Service app.
 
 ## Step 2: Building the Sample
 
@@ -60,11 +70,14 @@ To compile the sample using Visual Studio
 -	On the Project menu, click Add Reference. The Add References dialog box opens. 
 -	Click the .NET tab. 
 -	Click Browse, and find Microsoft.ReportingServices.Interfaces on your local drive. By default, the assembly is in the ```<install>\ReportServer\bin``` directory. Click OK. The selected reference is added to your project. 
+-	Open Logon.aspx.cs and replace ```applicationid from Azure site```  with copied applicationId.
+-	Replace domain name with correct domain name Ex: https://contoso.azurewebsites.net/ReportServer/Logon.aspx
 -	On the Build menu, click Build Solution. 
 
 Debugging
 
 To debug the extension, you might want to attach the debugger to both ReportingServicesService.exe and Microsoft.ReportingServices.Portal.Webhost.exe. And add breakpoints to the methods implementing the interface IAuthenticationExtension2.
+
 
 
 ## Step 3: Deployment and Configuration
