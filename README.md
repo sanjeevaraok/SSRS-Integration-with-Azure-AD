@@ -1,33 +1,5 @@
-# Reporting Services Custom Security Sample for Power BI Report Server and SQL Reporting Services 2017
-This project contains a sample and the steps that allow you to deploy a custom security extension to SQL Reporting Services 2017 or Power BI Report Server.
-
-# Synopsis
-# Custom Authentication in SSRS and Power BI Report Server
-
-SSRS 2016 introduced a new portal to host new OData APIs and host new report workloads such as mobile reports and KPIS. This new portal relies in newer technologies and is isolated from the familiar ReportingServicesService by running in a separate process. This process is not an ASP.NET hosted application and as such breaks assumptions from existing custom security extensions. Moreover, the current interfaces for custom security extensions don't allow for any external context to be passed-in, leaving implementers with the only choice to inspect well-known global ASP.NET Objects, this required some changes to the interface.
-
-## What Changed?
-
-A new interface is introduced that can be implemented which provides an IRSRequestContext providing the more common properties used by extensions to make decisions related to authentication. In previous version ReportManager was the front-end and could be configured with its own custom login page, in SSRS2016 only one page hosted by reportserver is supported and should authenticate to both applications.
-
-In previous versions extensions, could rely on a common assumption that ASP.NET objects would be readily available, since the new portal does not run in asp.net the extension might hit issues with objects being NULL. 
-The most generic example is accessing HttpContext.Current to read request information such as headers and cookies. In order to allow extensions to make the same decisions we introduced a new method in the extension that provides request information and is called when authenticating from the portal. 
-
-Extensions should implement the IAuthenticationExtension2 interface to leverage this. The extensions will need to implement both versions of GetUserInfo method, as is called by the reportserver context and other used in webhost process. The sample below shows one of the simple implementations for the portal where the identity resolved by the reportserver is the one used.
-  
-```csharp
-    public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIdentity, out IntPtr userId)
-    {
-        userIdentity = null;
-        if (requestContext.User != null)
-        {
-            userIdentity = requestContext.User;
-        }
-        
-        // initialize a pointer to the current user id to zero
-        userId = IntPtr.Zero;
-   }
-```
+# Power BI Report server and SQL erporting service 2017 integration with Azure SSO.
+This project contains a sample and the steps that allow you to deploy a Azure SSO security extension to SQL Reporting Services 2017 or Power BI Report Server.
 
 # Implementation 
 
