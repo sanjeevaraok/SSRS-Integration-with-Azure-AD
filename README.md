@@ -115,7 +115,7 @@ Modify files in the ReportServer Folder
 		<Extension Name="Forms" Type="Microsoft.Samples.ReportingServices.CustomSecurity.Authorization, Microsoft.Samples.ReportingServices.CustomSecurity" >
 		<Configuration>
 			<AdminConfiguration>
-				<UserName>username</UserName>
+				<UserName></UserName>
 			</AdminConfiguration>
 		</Configuration>
 		</Extension>
@@ -206,20 +206,4 @@ In the rsreportserver.config file add following under ```<UI>```
    </CustomAuthenticationUI>
 </UI>
 ``` 
-
-# Automatic configuration of the sample
-
-All the steps are automated in a PowerShell Script, if you have a Power BI Report Server default installation you can run (the script is only valid for Power BI Report Server, for SSRS you need to follow the manual steps)
-```
-.\Configure.ps1
-```
-*This configuration is not intended to use in production, you should generate your own strong name key and your own authentication key different of those used in the sample*
-
-# Code Of Conduct
-This project has adopted the [Microsoft Open Source Code of
-Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct
-FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
-with any additional questions or comments.
 
