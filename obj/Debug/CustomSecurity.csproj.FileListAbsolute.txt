@@ -1,0 +1,16 @@
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Setup\CreateUserStore.sql
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Logon.aspx
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Logon.aspx.cs
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Configure.ps1
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.dll.config
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.dll
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.pdb
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\bin\Debug\Microsoft.ReportingServices.Interfaces.dll
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.App_LocalResources.Logon.aspx.resources
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.CustomSecurity.resources
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\CustomSecurity.csproj.GenerateResource.cache
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\CustomSecurity.csproj.CoreCompileInputs.cache
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\CustomSecurity.csproj.CopyComplete
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.dll
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\Microsoft.Samples.ReportingServices.CustomSecurity.pdb
+F:\SSRS\Reporting-Services-master\Reporting-Services-master\CustomSecuritySample\obj\Debug\CustomSecurity.csprojResolveAssemblyReference.cache
