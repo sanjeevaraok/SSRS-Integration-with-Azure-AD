@@ -52,7 +52,7 @@ Script is in the CustomSecuritySample\Setup folder.
 7. Now click on the Reply URLs, edit the Reply URL, paste in the Application URL (from step 1), (For example, http://domainname/ReportServer/Logon.aspx). Click Save.
 8. At this point, copy the Application ID for the app. Keep it for later use. You will need it to configure your App Service app.
 
-## Step 2: Building the Sample
+## Step 3: Building the Sample
 
 You must first compile and install the extension. The procedure assumes that you have installed Reporting Services to the default location: C:\Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer\ or C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\. This location will be referred to throughout the remainder of this topic as ```<install>```.
 
@@ -80,7 +80,7 @@ To debug the extension, you might want to attach the debugger to both ReportingS
 
 
 
-## Step 3: Deployment and Configuration
+## Step 4: Deployment and Configuration
 
 The basic configurations needed for custom security extension are the same as previous releases. Following changes are needed in for web.config and rsreportserver.config present in the ReportServer folder. There is no longer a separate web.config for the reportmanager, the portal will inherit the same settings as the reportserver endpoint.
 
@@ -176,7 +176,7 @@ To modify the Web.config file for Report Server
 This will deny unauthenticated users the right to access the report server. The previously established loginUrl attribute of the ```<authentication>``` element will redirect unauthenticated requests to the Logon.aspx page.
 
 
-## Step 4: Generate Machine Keys
+## Step 5: Generate Machine Keys
 
 Using Forms authentication requires that all report server processes can access the authentication cookie. This involves configuring a machine key and decryption algorithm - a familiar step for those who had previously setup SSRS to work in scale-out environments.
 
@@ -192,7 +192,7 @@ Generate and add ```<MachineKey>``` under ```<Configuration>``` in your RSReport
 
 You should use a validation key specific for you deployment, there are several tools to generate the keys such as Internet Information Services Manager (IIS)
 
-## Step 5: Configure Passthrough cookies
+## Step 6: Configure Passthrough cookies
 
 The new portal and the reportserver communicate using internal soap APIs for some of its operations. When additional cookies are required to be passed from the portal to the server the PassThroughCookies properties is still available. More Details: https://msdn.microsoft.com/en-us/library/ms345241.aspx 
 In the rsreportserver.config file add following under ```<UI>```
